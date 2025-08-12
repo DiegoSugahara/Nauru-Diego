@@ -37,6 +37,7 @@ body {
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
+  
 }
 
 li {
@@ -165,6 +166,27 @@ header {
   scale: 0.95;
 }
 
+.actionButtonBaixar {
+  background-color: orange;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actionButtonBaixar:hover {
+  scale: 0.5;
+  color: #ffffff;
+}
+
+.actionButtonBaixar:active {
+  scale: 0.95;
+}
+
 
 /* DROPDOWN */
 
@@ -195,21 +217,19 @@ header {
 }
 
 /*HERO*/
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-  z-index: 2;
-  overflow: hidden;
+/**main {
+  flex: 1;
+  align-items: start;
+  margin-left: 10rem;
 }
 
 #hero h1 {
   font-size: 3rem;
-  font-family: 'Maragsa';
+  font-family: 'Rimba Andalas';
   margin-bottom: 1rem;
+  animation: titleAnim 5s ease-in-out infinite alternate;
+  text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+  animation: glow 1.5s infinite alternate;
 }
 
 #hero p {
@@ -217,7 +237,7 @@ main {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-
+**/
 /* RESPONSIVIDADE BOLADONA */
 @media (max-width: 992px) {
 
@@ -305,7 +325,7 @@ main {
   }
 }
 
-/**@keyframes glow {
+@keyframes glow {
   0% {
     text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
   }
@@ -313,7 +333,7 @@ main {
   100% {
     text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
   }
-}**/
+}
 
 @keyframes gradient {
   0% {

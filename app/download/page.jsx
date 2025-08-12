@@ -2,9 +2,9 @@
 
 import { IoMdMenu } from "react-icons/io";
 import Link from "next/link";
-import "./historiona.css"
+import "./download.css"
 
-export default function Historia() {
+export default function Download() {
   
   function toggleMenu() {
     const menu = document.querySelector(".dropdownMenu");
@@ -63,14 +63,12 @@ export default function Historia() {
         </div>
       </header>
 
-      <main>
-        <section id="w-full ">
-          <div>
-          <h1 className="titulo flex items-center justify-center md:text-7xl !text-6xl font-bold text-amber-500">Naurú</h1>
-          <p className="flex items-center justify-center w-6xl">Naurú é um jogo Metroidvania que conta a história de um jovem indígena que tem o dever de proteger a floresta de espíritos malignos, como sacis, corpos-secos e outros que atormentam as vidas dos habitantes das matas. Com uma jogabilidade rápida, mas simples de se jogar, o jogo tem o propósito de ser desafiador, porém, ao mesmo tempo, algo divertido e único. Tudo isso enquanto exploramos e descobrimos mais sobre as lendas e a cultura do nosso folclore brasileiro.</p>
-          </div>
-        </section>
-      </main>
+      <main className="flex items-start ">
+  <div className="w-5/6">
+    <h1 className="titulo flex justify-start md:text-7xl text-5xl font-bold">Baixe Agora</h1>
+    <p className="actionButton flex items-start justify-center w-1/10 font-bold ">Baixar</p>
+  </div>
+</main>
     </>
   );
 }

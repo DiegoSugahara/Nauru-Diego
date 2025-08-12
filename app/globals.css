@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Maragsa';
+  src: url('/fonts/Maragsâ-Display.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -109,7 +116,7 @@ header {
 
 .navbar .links {
   display: flex;
-  font-family: 'Rimba Andalas';
+  font-family: 'Maragsa';
   gap: 3rem;
 }
 
@@ -196,7 +203,7 @@ main {
 
 #hero h1 {
   font-size: 4.5rem;
-  font-family: 'Rimba Andalas';
+  font-family: 'Maragsa';
   margin-bottom: 0rem;
   animation: titleAnim 5s ease-in-out infinite alternate;
   text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
@@ -207,6 +214,10 @@ main {
   font-size: 1.5rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 4rem;
+}
+
+.titulo {
+  font-family: 'Maragsa';
 }
 
 #jogar {
@@ -222,18 +233,7 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#imgPerso {
-  margin-top: 2.5rem;
-  margin-right: 1.25rem;
-  width: 100%;
-}
 
-#personagensdiv {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
 #textosdivperso {
   margin-bottom: 2rem;
@@ -241,7 +241,7 @@ main {
 
 #textosdivperso h1 {
   font-size: 3rem;
-  font-family: 'Rimba Andalas';
+  font-family: 'Maragsa';
   margin-top: 2.5rem;
   margin-right: 5rem;
   animation: titleAnim 5s ease-in-out infinite alternate;
