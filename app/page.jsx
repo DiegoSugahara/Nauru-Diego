@@ -5,6 +5,7 @@ import { IoMdMenu } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 export default function Home() {
   const [index, setIndex] = useState(0);
@@ -16,27 +17,31 @@ export default function Home() {
     },
     {
       nome: "Iúna",
-      descricao: "Uma jovem guerreira indigena de uma tribo rival a de Caeté.",
+      descricao: "Uma jovem guerreira indígena de uma tribo rival a de Caeté.",
       imagem: "/iara.png",
     },
     {
       nome: "Saci",
-      descricao: "Espirito maligno com poderes de vento que anda sempre em grupo atormentando os moradores da floresta.",
+      descricao:
+        "Espírito maligno com poderes de vento que anda sempre em grupo atormentando os moradores da floresta.",
       imagem: "/saci.png",
     },
     {
       nome: "Caeté",
-      descricao: "O nosso protagonista da história, e um jovem guerreiro indigena que está sucedendo o cargo de guardião da floresta.",
+      descricao:
+        "O nosso protagonista da história, é um jovem guerreiro indígena que está sucedendo o cargo de guardião da floresta.",
       imagem: "/caete.PNG",
     },
     {
       nome: "Unhudo",
-      descricao: "Espirito grande e forte, muito assustador, com um corpo esquelético e chapéu de palha, ataca quem ele vê pela frente.",
+      descricao:
+        "Espírito grande e forte, muito assustador, com um corpo esquelético e chapéu de palha, ataca quem ele vê pela frente.",
       imagem: "/unhudo.png",
     },
     {
       nome: "Corpo-Seco",
-      descricao: "Um espirito extremamente parecido com um morto vivo, também se encontra em grupo colocando medo em quem habita as matas.",
+      descricao:
+        "Um espírito extremamente parecido com um morto vivo, também se encontra em grupo colocando medo em quem habita as matas.",
       imagem: "/corposeco.png",
     },
   ];
@@ -67,55 +72,52 @@ export default function Home() {
 
   const Equipe = [
     {
-      name: 'Matheus Lozano',
-      role: 'Documentação / Game Design',
-      imageUrl: '/matheussim.jpeg',
+      name: "Matheus Lozano",
+      role: "Documentação / Game Design",
+      imageUrl: "/matheussim.jpeg",
     },
     {
-      name: 'Gabriel Ruis',
-      role: 'Documentação',
-      imageUrl: '/gabrielsim.jpeg',
+      name: "Gabriel Ruis",
+      role: "Documentação",
+      imageUrl: "/gabrielsim.jpeg",
     },
     {
-      name: 'Diego Sugahara',
-      role: 'Sons / Lading Page',
-      imageUrl: '/diego.PNG',
+      name: "Diego Sugahara",
+      role: "Sons / Lading Page",
+      imageUrl: "/diego.PNG",
     },
     {
-      name: 'João Schvengber',
-      role: 'Programação',
-      imageUrl: '/joao.jpeg',
+      name: "João Schvengber",
+      role: "Programação",
+      imageUrl: "/joao.jpeg",
     },
     {
-      name: 'Rafael Wolf',
-      role: 'Arte / Animação',
-      imageUrl: '/rafaelsim.jpeg',
+      name: "Rafael Wolf",
+      role: "Arte / Animação",
+      imageUrl: "/rafaelsim.jpeg",
     },
     {
-      name: 'Enzo Ferrari',
-      role: 'Arte / Cenários',
-      imageUrl: '/enzo.jpeg',
+      name: "Enzo Ferrari",
+      role: "Arte / Cenários",
+      imageUrl: "/enzo.jpeg",
     },
   ];
 
   return (
     <>
-      <section
-        className="hero-animado w-full min-h-[70vh] sm:min-h-[100vh] flex flex-col justify-start items-center relative overflow-hidden"
-
-      >
+      <section className="hero-animado w-full min-h-[70vh] sm:min-h-[100vh] flex flex-col justify-start items-center relative overflow-hidden">
         <video
           autoPlay
           muted
           loop
           playsInline
           className="video-bg absolute top-0 left-0 w-full h-full object-cover z-0"
-
         >
           <source src="/teste.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute top-0 left-0 w-full h-full bg-[rgba(40,40,40,0.5)] z-10 "
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-[rgba(40,40,40,0.5)] z-10 "
           style={{
             position: "absolute",
             top: 0,
@@ -127,27 +129,29 @@ export default function Home() {
           }}
         />
 
-
-        <header className="w-full relative z-20" style={{ width: "100%", position: "relative", zIndex: 2 }}>
+        <header
+          className="w-full relative z-20"
+          style={{ width: "100%", position: "relative", zIndex: 2 }}
+        >
           <div className="navbar navbar px-4 sm:px-8 py-4 flex justify-between items-center">
-            <div className="logo">
-              <h1 className="logoImg text-xl sm:text-2xl">Nauru</h1>
+            <div className="logoImg">
+              <h1 className="titulo !text-5xl sm:text-2xl">Naurú</h1>
             </div>
             <ul className="links md:flex gap-6 text-white font-medium">
               <li>
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/historia">História</Link>
+                <Link href="#artes">Artes</Link>
               </li>
               <li>
-                <Link href="/download">Download</Link>
+                <Link href="#download">Download</Link>
               </li>
               <li>
-                <Link href="/sobrenos">Sobre Nós</Link>
+                <Link href="#sobrenos">Sobre Nós</Link>
               </li>
             </ul>
-            <Link href="/download" className="actionButton hidden md:block">
+            <Link href="#download" className="actionButton hidden md:block">
               Bora lá
             </Link>
             <div className="toggleButton md:hidden">
@@ -161,22 +165,23 @@ export default function Home() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/historia">Historia</Link>
+              <Link href="#artes">Artes</Link>
             </li>
             <li>
-              <Link href="/download">Download</Link>
+              <Link href="#download">Download</Link>
             </li>
             <li>
-              <Link href="/sobrenos">Sobre-nós</Link>
+              <Link href="#sobrenos">Sobre-nós</Link>
             </li>
             <li>
-              <Link href="/download" className="actionButton">
+              <Link href="#download" className="actionButton">
                 Bora lá
               </Link>
             </li>
           </div>
         </header>
-        <div className="flex-1 w-full flex flex-col items-center justify-center text-white text-center px-4 sm:px-10 py-8 sm:py-16 relative z-10"
+        <div
+          className="flex-1 w-full flex flex-col items-center justify-center text-white text-center px-4 sm:px-10 py-8 sm:py-16 relative z-10"
           style={{
             flex: 1,
             width: "100%",
@@ -191,25 +196,36 @@ export default function Home() {
             zIndex: 1,
           }}
         >
-          <h1
-            className="titulo text-3xl sm:text-5xl font-bold mb-4 text-amber-500"
-            style={{ fontSize: "3rem", marginBottom: "1rem" }}
-          >
-            Naurú
-          </h1>
-          <p className="text-sm sm:text-base max-w-[800px] leading-relaxed">
-            Naurú é um jogo Metroidvania que conta a história de um jovem indígena que tem o dever de proteger a floresta de espíritos malignos, como sacis, corpos-secos e outros que atormentam as vidas dos habitantes das matas. Com uma jogabilidade rápida, mas simples de se jogar, o jogo tem o propósito de ser desafiador, porém, ao mesmo tempo, algo divertido e único. Tudo isso enquanto exploramos e descobrimos mais sobre as lendas e a cultura do nosso folclore brasileiro.
+          
+          <p className="!text-lg sm:text-base max-w-[800px]  leading-relaxed">
+            Naurú é um jogo Metroidvania que conta a história de um jovem
+            indígena que tem o dever de proteger a floresta de espíritos
+            malignos, como sacis, corpos-secos e outros que atormentam as vidas
+            dos habitantes das matas. Com uma jogabilidade rápida, mas simples
+            de se jogar, o jogo tem o propósito de ser desafiador, porém, ao
+            mesmo tempo, algo divertido e único. Tudo isso enquanto exploramos e
+            descobrimos mais sobre as lendas e a cultura do nosso folclore
+            brasileiro.
           </p>
         </div>
       </section>
 
       {/*PERSONAGE*/}
-      <section className="bg-white text-black w-full !min-h-[50vh] sm:min-h-[50vh] md:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-10">
+      <section
+        id="artes"
+        className="bg-gray-200 text-black w-full !min-h-[50vh] sm:min-h-[50vh] md:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-10"
+      >
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-12 max-w-[1400px] w-full">
           <div className="w-full md:w-2/5 !ml-2 text-center md:text-left">
-            <h2 className="titulo text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">Personagens</h2>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">{personagem.descricao}</p>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{personagem.nome}</h3>
+            <h2 className="titulo text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">
+              Personagens
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+              {personagem.descricao}
+            </p>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">
+              {personagem.nome}
+            </h3>
           </div>
 
           <div className="w-full md:w-3/5 flex items-center justify-center relative">
@@ -242,9 +258,10 @@ export default function Home() {
 
       {/*CENARIO*/}
       <section className="bg-black bg-cover text-white w-full !min-h-[50vh] sm:min-h-[50vh] md:min-h-[60vh] flex flex-col items-center justify-center px-4 sm:px-6 py-6 sm:py-10">
-        <h2 className="titulo text-2xl sm:text-4xl md:text-6xl font-bold !mb-4 !mt-2 flex items-center justify-center">Cenários</h2>
+        <h2 className="titulo text-2xl sm:text-4xl md:text-6xl font-bold !mb-4 !mt-2 flex items-center justify-center">
+          Cenários
+        </h2>
         <div className="flex flex-row md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 max-w-[1400px] w-full">
-
           {/*UM*/}
           <div className="!w-full md:w-2/5 !ml-2 flex flex-col justify-center items-center">
             <Image
@@ -254,8 +271,12 @@ export default function Home() {
               alt="Personagens do jogo Nauru"
               className="rounded-lg w-full h-auto max-w-[600px] sm:max-w-[800px] md:max-w-[900px]"
             />
-            <h2 className="titulo !text-5xl sm:text-4xl md:text-6xl font-bold !mt-1 sm:mb-6">Floresta</h2>
-            <p className="!mb-4 sm:text-base max-w-[800px]">Cenário da floresta, onde se passa o início do jogo</p>
+            <h2 className="titulo !text-5xl sm:text-4xl md:text-6xl font-bold !mt-1 sm:mb-6">
+              Floresta
+            </h2>
+            <p className="!mb-4 sm:text-base max-w-[800px]">
+              Cenário da floresta, onde se passa o início do jogo
+            </p>
           </div>
 
           {/*DOIS*/}
@@ -267,15 +288,21 @@ export default function Home() {
               alt="Personagens do jogo Nauru"
               className="rounded-lg w-full h-auto max-w-[600px] sm:max-w-[800px] md:max-w-[900px]"
             />
-            <h2 className="titulo !text-5xl sm:text-2xl md:text-2xl font-bold !mt-1 sm:mb-6">Caverna</h2>
-            <p className="!mb-4 sm:text-base max-w-[800px]">Cenário da caverna, onde se passa a maior parte do jogo</p>
+            <h2 className="titulo !text-5xl sm:text-2xl md:text-2xl font-bold !mt-1 sm:mb-6">
+              Caverna
+            </h2>
+            <p className="!mb-4 sm:text-base max-w-[800px]">
+              Cenário da caverna, onde se passa a maior parte do jogo
+            </p>
           </div>
-
         </div>
       </section>
 
       {/*BAIXAR*/}
-      <section className="relative bg-white text-black w-full !min-h-[50vh] sm:min-h-[50vh] md:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-10 overflow-hidden">
+      <section
+        id="download"
+        className="relative bg-gray-200 text-black w-full !min-h-[50vh] sm:min-h-[50vh] md:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-10 overflow-hidden"
+      >
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-12 max-w-[1400px] w-full z-10">
           <div className="w-full md:w-2/5 text-center md:text-left">
             <h2 className="titulo text-3xl sm:text-5xl md:text-6xl lg:text-8xl !ml-2 font-bold leading-tight">
@@ -298,7 +325,10 @@ export default function Home() {
       </section>
 
       {/*EQUIEPE*/}
-      <section className="bg-black text-white w-full !min-h-[50vh] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-10">
+      <section
+        id="sobrenos"
+        className="bg-black text-white w-full !min-h-[50vh] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-10"
+      >
         <div className="max-w-7xl mx-auto px-6 text-center !mb-4">
           <h2 className="text-4xl sm:text-6xl font-bold text-amber-400 !mb-2 !mt-4">
             Nossa Equipe
@@ -312,7 +342,7 @@ export default function Home() {
                 key={index}
                 className="shadow-lg w-full flex flex-col items-center justify-between text-center px-2 py-4"
               >
-                <div className="w-28 h-28 sm:w-36 sm:h-36 relative mb-2">
+                <div className="w-32 h-32 sm:w-36 sm:h-36 relative mb-2">
                   <Image
                     src={membro.imageUrl}
                     alt={membro.name}
@@ -320,7 +350,9 @@ export default function Home() {
                     className="rounded-full object-cover"
                   />
                 </div>
-                <h3 className="text-base sm:text-xl font-semibold text-amber-400">{membro.name}</h3>
+                <h3 className="text-base sm:text-xl font-semibold text-amber-400">
+                  {membro.name}
+                </h3>
                 <p className="text-white text-xs sm:text-base">{membro.role}</p>
               </div>
             ))}
@@ -329,11 +361,12 @@ export default function Home() {
       </section>
 
       {/*coisa do site*/}
-      <section className="bg-white text-white w-full !min-h-[22.5vh] sm:min-h-[50vh] md:min-h-[60vh] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-10">
+      <section className="bg-gray-100 text-white w-full !min-h-[22.5vh] sm:min-h-[50vh] md:min-h-[60vh] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-10">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 max-w-[1400px] w-full">
-
           <div className="w-full md:w-2/5">
-            <h2 className="titulo !text-[32px] sm:text-2xl md:text-6xl font-bold text-black sm:mb-6 flex items-center justify-center">Naurú</h2>
+            <h2 className="titulo !text-[32px] sm:text-2xl md:text-6xl font-bold text-black sm:mb-6 flex items-center justify-center">
+              Naurú
+            </h2>
             <p className="!text-[12px] sm:text-base md:text-xl text-black leading-relaxed flex items-center justify-center">
               © 2025 Naurú. Todos os direitos reservados.
             </p>
@@ -347,12 +380,10 @@ export default function Home() {
               />
             </div>
           </div>
-
         </div>
       </section>
 
-
-
+      <ScrollToTopButton />
     </>
   );
 }
